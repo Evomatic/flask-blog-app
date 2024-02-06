@@ -1,0 +1,17 @@
+{
+  "name": "frontend",
+  "description": "Simple frontend for a blog app",
+  "main": "src/index.ts",
+  "scripts": {
+    "build": "tsc && yarn run build:cp-public",
+    "build:cp-public": "cp ./public/** ./dist",
+    "type": "tsc --noEmit"
+  },
+  "packageManager": "yarn@4.0.2",
+  "author": "Evan Trujillo",
+  "devDependencies": {
+    "corepack": "^0.24.1",
+    "tsc": "^2.0.4",
+    "typescript": "^5.3.3"
+  }
+}
