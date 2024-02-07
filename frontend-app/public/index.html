@@ -1,11 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="../src/styles.css" />
 </head>
+
+
 <body>
-    <script src="./index.js"></script>
+    <nav>
+        <h1>Flaskr</h1>
+        <ul>
+            <li class="username-logged-in"><span>username</span>
+            <li class="username-logged-in"><a href="{{ url_for('auth.logout') }}">Log Out</a>
+            <li class="username-register is-active"><a href="{{ url_for('auth.register') }}">Register</a>
+            <li class="username-register is-active"><a href="{{ url_for('auth.login') }}">Log In</a>
+        </ul>
+    </nav>
+    <section class="content">
+        <header>
+        </header>
+        <div class="flash error-message"></div>
+        <div class="content register">
+            <h1>Register</h1>
+            <form id="form" method="post">
+                <label for="username">Username</label>
+                <input name="username" id="username" required>
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" required>
+                <input type="submit" value="Register">
+            </form>
+        </div>
+        <div class="content log-in">
+            <h1>Log In</h1>
+            <form id="form" method="post">
+                <label for="username">Username</label>
+                <input name="username" id="username" required>
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" required>
+                <input type="submit" value="Log In">
+            </form>
+        </div>
+    </section>
+    <script src="index.js"></script>
 </body>
+
 </html>
